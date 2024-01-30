@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "name": "Ergonomic Wooden Salad",
+      "description": "fault-tolerant",
+      "price": "780.00",
+      "image": "https://loremflickr.com/640/480",
+      "id": "1"
+    },
+    {
+      "name": "Luxurious Wooden Mouse",
+      "description": "leading edge",
+      "price": "875.00",
+      "image": "https://loremflickr.com/640/480",
+      "id": "2"
+    },
+    {
+      "name": "Electronic Soft Soap",
+      "description": "motivating",
+      "price": "795.00",
+      "image": "https://loremflickr.com/640/480",
+      "id": "3"
+    },
+    {
+      "name": "Elegant Steel Hat",
+      "description": "scalable",
+      "price": "328.00",
+      "image": "https://loremflickr.com/640/480",
+      "id": "4"
+    },
+    {
+      "name": "Handmade Soft Keyboard",
+      "description": "coherent",
+      "price": "235.00",
+      "image": "https://loremflickr.com/640/480",
+      "id": "5"
+    },
+    {
+      "name": "Unbranded Rubber Chicken",
+      "description": "zero defect",
+      "price": "387.00",
+      "image": "https://loremflickr.com/640/480",
+      "id": "6"
+    }
+  ]
+}

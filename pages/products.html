@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#F0F8FF">
+        <meta name="description" content="a product list app">
+        <meta name="background-color" content="#F0F8FF">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+        <meta name="description" content="a product list app">
+        <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+        <link rel="shortcut icon" href="/assets/shopping-bag.png" type="image/png">
+        <title>Product App</title>
+        <script type="module" src="../src/reloadScript.js"></script>
+    </head>
+    <body class="body_scroll">
+        <div class="container">
+            <div class="connection_notification online">
+                <p>CONNECTED TO NETWORK, REFRESH TO LOAD NEW DATA</p>
+                <button class="refresh">
+                    <span>REFRESH</span>
+                </button>
+            </div>
+            <div class="connection_notification offline">
+                <p>CURRENTLY DISCONNECTED FROM NETWORK</p>
+            </div>
+            <div class="wrapper">
+                <h1 class="title">PRODUCT LIST</h1>
+                <div>
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button class="modal_button" onclick="create_modal.showModal()">add product</button>
+                    <dialog id="create_modal" class="modal">
+                        <h1>Create Product</h1>
+                        <div class="modal-box">
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <div class="create_input">
+                                        <label for="product_name">Name</label>
+                                        <input type="text" name="product_name" id="product_name">
+                                    </div>
+                                    <div class="create_input">
+                                        <label for="product_name">Description</label>
+                                        <input type="text" name="product_description" id="product_description">
+                                    </div>
+                                    <div class="create_input">
+                                        <label for="product_name">Price</label>
+                                        <input type="text" name="product_price" id="product_price">
+                                    </div>
+                                    <div class="create_input">
+                                        <label for="product_name">Image URL</label>
+                                        <input type="text" name="product_image" id="product_image">
+                                    </div>
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <div class="create_button">
+                                        <button type="submit" class="add-submit">Create</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
+                    <dialog id="edit_modal" class="modal">
+                        <h1>Edit Product</h1>
+                        <div class="modal-box">
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <div class="create_input">
+                                        <label for="edit_name">Name</label>
+                                        <input type="text" name="edit_name" id="edit_name">
+                                    </div>
+                                    <div class="create_input">
+                                        <label for="edit_name">Description</label>
+                                        <input type="text" name="edit_description" id="edit_description">
+                                    </div>
+                                    <div class="create_input">
+                                        <label for="edit_name">Price</label>
+                                        <input type="text" name="edit_price" id="edit_price">
+                                    </div>
+                                    <div class="create_input">
+                                        <label for="edit_name">Image URL</label>
+                                        <input type="text" name="edit_image" id="edit_image">
+                                    </div>
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <div class="create_button">
+                                        <button type="submit" class="edit-submit">Edit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
+                <div class="container_child" id="product__list"></div>
+                <div class="popup_box">
+                    <header>
+                        <img src="/assets/shopping-bag.png" alt="product">
+                        <p>Install This Web ?</p>
+                    </header>
+                    <div class="popup_body">
+                        <p>You can seeing this page in offline mode or online mode after installing this page</p>
+                    </div>
+                    <div class="popup_action">
+                        <button class="install_button">
+                            <span class="install_text">Install This Page</span>
+                            <span class="loading_install">
+                                <img src="/assets/Pulse-1s-58px (1).gif">
+                            </span>
+                        </button>
+                        <button class="cancel_button">
+                            <span>
+                                Not This Time
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/js/app.js"></script>
+    <script type="text/javascript" src="/src/index.js" language="JavaScript Native"></script>
+    <script type="module" src="../src/firebase.js"></script>
+</html>

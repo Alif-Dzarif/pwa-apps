@@ -1,0 +1,375 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(100 116 139);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 100dvw;
+  overflow-x: hidden;
+}
+
+.container.disable {
+  overflow: hidden;
+  user-select: none;
+}
+
+.connection_notification {
+  position: fixed;
+  background-color: white;
+  top: -20%;
+  width: 90%;
+  padding: 0rem 1rem;
+  border-radius: 10px;
+  transition: top 0.3s ease;
+  z-index: 20;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.connection_notification .offline {
+  top: 0.5%;
+}
+
+.online {
+  color: rgb(18, 173, 18);
+}
+
+.online button {
+  background-color: rgb(82, 82, 251);
+  color: white;
+  padding: 0rem 1.5rem;
+  height: 40px;
+  border: none;
+  z-index: 40;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.online button span {
+  font-weight: bolder;
+}
+
+.offline {
+  color: rgb(231, 102, 102);
+}
+
+.online.show,
+.offline.show,
+.add_notif {
+  top: 0.5%;
+}
+
+.connection_notification p {
+  font-weight: bold;
+  font-size: small;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.wrapper.disable {
+  filter: blur(2px);
+  z-index: -20;
+  pointer-events: none;
+}
+
+
+.modal {
+  border: none;
+  border-radius: 15px;
+  padding: 2rem 3rem;
+}
+
+.modal h1 {
+  text-align: center;
+}
+
+.create_input input {
+  padding: 0rem 0rem;
+  width: 300px;
+  margin: 0.5rem 0rem;
+  border: none;
+  border-bottom: 3px solid black;
+  font-size: large;
+}
+
+.create_input input:focus {
+  outline: none;
+}
+
+.create_input label {
+  font-weight: 700;
+
+}
+
+.create_input {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem;
+}
+
+.create_button {
+  display: flex;
+  justify-content: end;
+  margin-top: 3rem;
+}
+
+.create_button button {
+  padding: 0.5rem 2rem;
+  background-color: rgb(87, 204, 87);
+  cursor: pointer;
+  color: white;
+  font-weight: 900;
+  border: 2px solid green;
+  border-radius: 10px;
+}
+
+
+
+.modal_button {
+  position: sticky;
+  right: 10px;
+  padding: 0.6rem 1.3rem;
+  border-radius: 7px;
+  border: none;
+  background-color: rgb(92, 92, 254);
+  font-size: large;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.modal_button:active {
+  background-color: blue;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.index_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.index_wrapper button {
+  background-color: rgb(66, 66, 255);
+  border: 2px solid rgb(66, 66, 255);
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  margin-top: 50%;
+  font-size: large;
+  cursor: pointer;
+}
+
+.container_child {
+  /* max-width: 100dvw; */
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 20px;
+}
+
+
+.card_box {
+  max-width: 300px;
+  background-color: rgba(187, 185, 185, 0.404);
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.card_box figure {
+  display: flex;
+  justify-content: center;
+}
+
+.card_box figure img {
+  max-width: 120%;
+  border-radius: 10px;
+}
+
+.card_body {
+  text-align: center;
+  padding: 0px 5px;
+}
+
+.card_body p {
+  white-space: normal
+}
+
+.card_actions {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.card_interact button {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card_interact button:first-child {
+  background-color: rgb(210, 154, 2);
+}
+
+.card_interact button:last-child {
+  background-color: rgb(189, 0, 0);
+}
+
+.card_actions button {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.popup_box {
+  position: fixed;
+  right: -390px;
+  margin-right: 1rem;
+  bottom: 4rem;
+  max-width: 260px;
+  background-color: rgba(255, 255, 255, 0.915);
+  padding: 1rem;
+  transition: right 0.5s ease;
+  border-radius: 10px
+}
+
+.popup_box.show {
+  right: 0px;
+}
+
+.popup_box header {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.popup_box header img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.popup_box header p {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.popup_body p {
+  font-size: x-small;
+  font-weight: 600;
+}
+
+.popup_action {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup_action button {
+  padding: 1rem 1.3rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: x-small;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.install_button {
+  background-color: rgb(102, 102, 255);
+}
+
+.install_text.hidden {
+  display: none;
+}
+
+
+.loading_install.hidden {
+  display: none;
+}
+
+.loading_install img {
+  width: 20px;
+
+}
+
+.install_button:active {
+  background-color: blue;
+}
+
+.cancel_button {
+  background-color: rgb(255, 102, 105);
+}
+
+.cancel_button:active {
+  background-color: red;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 3rem 2.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .card_actions button {
+    margin-bottom: 0px;
+  }
+
+  .popup_box {
+    max-width: 300px;
+  }
+
+  .popup_box header img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .popup_box header p {
+    font-size: large;
+    font-weight: 700;
+  }
+
+  .popup_body p {
+    font-size: medium;
+    font-weight: 600;
+  }
+
+  .popup_action button {
+    padding: 0.6rem 1rem;
+    font-size: medium;
+    cursor: pointer;
+  }
+
+  .connection_notification p {
+    font-weight: bold;
+    font-size: medium;
+  }
+
+  .online button {
+    background-color: rgb(82, 82, 251);
+    color: white;
+    padding: 0rem 2rem;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
